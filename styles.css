@@ -1,0 +1,240 @@
+/* Reset simple */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* Fond gaming bleu */
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('/static/img/BAC.jpg'); 
+  background-size: cover;      
+  background-position:initial;
+  background-repeat:no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8fb4fff5;
+}
+
+/* Card centrale */
+.card {
+  background: rgba(17, 40, 74, 0.782);
+  border-radius: 30px;
+  padding: 2.5rem 3rem;
+  max-width: 700px;
+  width: 100%;
+  box-shadow:
+    0 0 25px rgba(96, 111, 135, 0.35),
+    0 10px 40px rgba(230, 232, 193, 0.352);
+  border: 1px solid rgba(100, 139, 203, 0.4);
+}
+
+/* Titres */
+.title {
+  font-size: 3rem;
+  font-family: cursive;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.05em;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: cursive;
+  color: #8abdf7;
+  margin-bottom: 3.5rem;
+}
+
+/* Texte */
+.text-center {
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: cursive;
+  margin-bottom: 2rem;
+  color: #a4b6f3;
+}
+
+/* Boutons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  font-weight: 600px;
+  font-family: cursive;
+  font-size: 1.5rem;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #8f25eb, #f772d8, #e2ba65);
+  color: #f9fafb;
+  box-shadow: 0 0 18px rgba(56, 189, 248, 0.5);
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 0 26px rgba(142, 219, 252, 0.603);
+}
+
+.btn-secondary {
+  background: rgba(13, 33, 80, 0.9);
+  border-color: #38bff874;
+  color: #e5e7eb;
+}
+
+.btn-secondary:hover {
+  background: rgba(161, 188, 234, 0.586);
+  transform: translateY(-1px);
+}
+
+.btn-ghost {
+  background: transparent;
+  border-color: transparent;
+  color: #93c5fd;
+}
+
+.btn-ghost:hover {
+  color: #bfdbfe;
+}
+
+/* Layout boutons */
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+/* Section jeu */
+.game-section {
+  margin-top: 1rem;
+}
+
+.masked-word {
+  font-size: 2.1rem;
+  letter-spacing: 0.3em;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  color: #9bd7ff;
+}
+
+.status {
+  margin-bottom: 1.5rem;
+  font-family: cursive;
+  font-size: 1.25rem;
+  color: #b6c7ff;
+}
+
+.attempts {
+  font-weight: 700;
+  color: #d299f1;
+}
+
+.bad-letters {
+  font-weight: 600;
+  color: #ffef5c;
+}
+
+.bad-letters.empty {
+  opacity: 0.7;
+}
+
+/* Formulaire */
+.guess-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.guess-form label {
+  font-size: 0.95rem;
+  color: #b6c7ff;
+}
+
+.guess-form input[type="text"] {
+  padding: 0.5rem 0.8rem;
+  border-radius: 10px;
+  border: 1px solid rgba(153, 178, 212, 0.6);
+  background: rgba(13, 33, 80, 0.9);
+  color: #e5e7eb;
+  font-size: 1rem;
+  max-width: 120px;
+}
+
+.guess-form input[type="text"]:focus {
+  outline: none;
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.5);
+}
+
+/* Résultat */
+.result-message {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.result-message.success {
+  color: #4ade80;
+}
+
+.result-message.error {
+  color: #fb7185;
+}
+
+.result-message.info {
+  color: #e5e7eb;
+}
+
+.secret-word {
+  text-align: center;
+  margin-top: 0.5rem;
+  color: #e5e7eb;
+}
+
+/* Responsif */
+@media (max-width: 480px) {
+  .card {
+    padding: 1.8rem 1.4rem;
+  }
+
+  .masked-word {
+    font-size: 1.8rem;
+    letter-spacing: 0.2em;
+  }
+}
+.hangman-box {
+  margin: 1.2rem auto;
+  text-align: center;
+}
+
+.hangman-img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid rgba(56, 189, 248, 0.5);
+  box-shadow: 0 0 18px rgba(56, 189, 248, 0.55);
+  background: rgba(184, 206, 255, 0.9);
+  padding: 0.4rem;
+}
+.hangman-img:hover {
+  box-shadow: 0 0 26px rgba(56, 191, 248, 0.714);
+}
